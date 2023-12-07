@@ -4,6 +4,7 @@ import React, { FormEvent, FormEventHandler, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import axios, { AxiosError } from 'axios'
 import { signIn } from 'next-auth/react'
+import { Button } from '@material-tailwind/react'
 
 const RegisterPage = () => {
 
@@ -72,11 +73,12 @@ const RegisterPage = () => {
           className='bg-zinc-800 px-4 py-2 block mb-2 w-full'
         />
 
-        <button
+        <Button
+          type="submit"
           className='bg-indigo-500 px-4 py-2'
         >
           Register
-        </button>
+        </Button>
       </form>
     </div>
   )
